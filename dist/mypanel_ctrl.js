@@ -1,9 +1,9 @@
 'use strict';
 
-System.register(['app/plugins/sdk'], function (_export, _context) {
+System.register(['app/plugins/sdk', 'lodash'], function (_export, _context) {
 	"use strict";
 
-	var PanelCtrl, _createClass, MyPanelCtrl;
+	var PanelCtrl, _, _createClass, panelDefaults, MyPanelCtrl;
 
 	function _classCallCheck(instance, Constructor) {
 		if (!(instance instanceof Constructor)) {
@@ -38,6 +38,8 @@ System.register(['app/plugins/sdk'], function (_export, _context) {
 	return {
 		setters: [function (_appPluginsSdk) {
 			PanelCtrl = _appPluginsSdk.PanelCtrl;
+		}, function (_lodash) {
+			_ = _lodash.default;
 		}],
 		execute: function () {
 			_createClass = function () {
@@ -58,6 +60,8 @@ System.register(['app/plugins/sdk'], function (_export, _context) {
 				};
 			}();
 
+			panelDefaults = {};
+
 			_export('MyPanelCtrl', MyPanelCtrl = function (_PanelCtrl) {
 				_inherits(MyPanelCtrl, _PanelCtrl);
 
@@ -66,6 +70,8 @@ System.register(['app/plugins/sdk'], function (_export, _context) {
 
 					var _this = _possibleConstructorReturn(this, (MyPanelCtrl.__proto__ || Object.getPrototypeOf(MyPanelCtrl)).call(this, $scope, $injector));
 
+					_.defaults(_this.panel, panelDefaults);
+					_this.events.on('init-edit-mode', _this.onInitEditMode.bind(_this));
 					_this.events.on('panel-initialized', _this.render.bind(_this));
 					return _this;
 				}
@@ -81,6 +87,8 @@ System.register(['app/plugins/sdk'], function (_export, _context) {
 			}(PanelCtrl));
 
 			_export('MyPanelCtrl', MyPanelCtrl);
+
+			MyPanelCtrl.templateUrl = "module.html";
 		}
 	};
 });
