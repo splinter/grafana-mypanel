@@ -3,7 +3,7 @@ This panel was written by following the reference plugin implementation provided
 
 https://github.com/grafana/clock-panel
 
-and the official developer docuementation found here:
+and the official developer documentation found here:
 
 http://docs.grafana.org/plugins/development/
 
