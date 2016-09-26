@@ -11,4 +11,11 @@ http://docs.grafana.org/plugins/development/
 1. Grafana v3.1.1
 
 #Installation
-Clone this repo to the /var/lib/grafana/plugins directory
+1. Locate the plugin directory for your Grafana installation. The default plugin directory for Linux distributions is /var/lib/grafana/plugins [1]
+2. Clone this repo to the plugin directory
+```bash
+   git clone https://github.com/splinter/grafana-mypanel.git
+``
+
+#References
+[1] http://docs.grafana.org/plugins/installation/
