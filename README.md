@@ -15,7 +15,7 @@ http://docs.grafana.org/plugins/development/
 2. Clone this repo to the plugin directory
 ```bash
    git clone https://github.com/splinter/grafana-mypanel.git
-``
+```
 
 #References
 [1] http://docs.grafana.org/plugins/installation/
