@@ -17,5 +17,11 @@ http://docs.grafana.org/plugins/development/
    git clone https://github.com/splinter/grafana-mypanel.git
 ```
 
+#Making changes
+1. Create a distribution by using the following command in this directory
+```bash
+   grunt
+```
+
 #References
 [1] http://docs.grafana.org/plugins/installation/
